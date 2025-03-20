@@ -1,14 +1,14 @@
 import random
 
 def choose_word():
-    # List of words for the game
+    
     words = ["python", "hangman", "challenge", "programming", "computer", "algorithm"]
     return random.choice(words)
 
 def hangman():
     word = choose_word()
-    attempts = 3  # Number of attempts allowed
-    hints_given = 0  # Track how many hints have been given
+    attempts = 3  
+    hints_given = 0  
 
     print("Welcome to Hangman!")
     print("Here are the possible words you might need to guess:")
@@ -26,7 +26,7 @@ def hangman():
             if attempts > 0:
                 print(f"Wrong guess! You have {attempts} attempts left.")
                 
-                # Provide hints after wrong guesses
+               
                 if hints_given == 0:
                     print(f"Hint: The word starts with the letter '{word[0]}'.")
                     hints_given += 1
